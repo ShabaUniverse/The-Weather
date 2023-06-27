@@ -1,0 +1,76 @@
+.weather {
+
+    background: radial-gradient(circle, #403f48 10%, transparent 11%);
+    background-size: 3em 3em;
+    background-color: #5c7c7b;
+    opacity: 1;
+    text-align: center;
+    height: 100vh;
+
+    &-wrapper {
+        height: 100%;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        .box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .first {
+                h5 {
+                    font-size: 22px;
+                }
+            }
+
+            .second {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                p {
+                    font-size: 72px;
+                }
+
+                img {
+                    height: 120px;
+                    width: 120px;
+                }
+            }
+
+            .third {
+                p {
+                    font-size: 42px;
+                }
+            }
+
+            .fourth {
+                p {
+                    font-size: 20px;
+                    margin: 5px 0;
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .weather {
+
+        &-wrapper {
+
+            .box {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
+}

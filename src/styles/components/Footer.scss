@@ -1,0 +1,17 @@
+.footer {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        p{
+            color: white;
+        }
+    }
+}
