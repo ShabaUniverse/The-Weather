@@ -37,9 +37,11 @@ const FetchLocation = ({ url }) => {
 
   return (
     <div className="databox">
-      <h5>{locationName}</h5>
-      <h6>{country}</h6>
-      <div className="datashka">
+      <div className="databox-name">
+        <h5>{locationName}</h5>
+        <h6>{country}</h6>
+      </div>
+      <div className="databox-temp">
         <p>{temp} c&deg;</p>
         <img src={`https://openweathermap.org/img/wn/${icon}@4x.png`} alt="" />
       </div>

@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="footer-wrapper">
-          <p>shabdan kozhonaliev</p>
+          <p>by | shabdan kozhonaliev</p>
         </div>
       </div>
     </div>

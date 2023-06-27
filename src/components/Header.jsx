@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { useDispatch} from "react-redux";
 
-import { setCityName, setHasData, setHumidity, setIconURL, setPressure, setTemp, setWeatherInfo, setWind } from "../data/dataSlice";
+import { setCityName, setCountryName, setHasData, setHumidity, setIconURL, setPressure, setTemp, setWeatherInfo, setWind } from "../data/dataSlice";
 import { setLat, setLon } from "../data/digitSlice";
 import { setSearchValue } from "../data/searchSlice";
 
@@ -18,6 +18,7 @@ const Header = () => {
 
   const setToIntiial = () => {
     dispatch(setCityName(""));
+    dispatch(setCountryName(""));
     dispatch(setSearchValue(""));
     dispatch(setIconURL(""));
     dispatch(setWeatherInfo(""));
@@ -63,7 +64,7 @@ const Header = () => {
       <div className="container">
         <div className="header-wrapper">
           <div className="logo">
-            <Link to="/" onClick={() => setToIntiial()}>the.weather</Link>
+            <Link to="/" onClick={() => setToIntiial()}>soft.weather</Link>
           </div>
 
           <div className="menu">
