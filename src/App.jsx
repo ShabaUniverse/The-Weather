@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Weather from "./pages/Weather";
 import Footer from "./components/Footer";
+import Loading from "./components/Loading";
 
 function App() {
   return (

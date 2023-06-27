@@ -1,6 +1,7 @@
 import React from "react";
 import useAPI from "../components/useAPI";
 import "../styles/pages/Weather.scss";
+import Loading from "../components/Loading";
 
 const Weather = () => {
   const {
@@ -23,33 +24,37 @@ const Weather = () => {
   return (
     <div className="weather">
       <div className="container">
-        <div className="weather-wrapper">
-          <div className="box">
-            <div className="first">
-              <h5>
-                {cityName}, {countryName}
-              </h5>
-            </div>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="weather-wrapper">
+            <div className="box">
+              <div className="first">
+                <h5>
+                  {cityName}, {countryName}
+                </h5>
+              </div>
 
-            <div className="second">
-              <p className="temperature">{temp}&deg;c</p>
-              <img
-                src={`https://openweathermap.org/img/wn/${iconURL}@4x.png`}
-                alt=""
-              />
-            </div>
+              <div className="second">
+                <p className="temperature">{temp}&deg;c</p>
+                <img
+                  src={`https://openweathermap.org/img/wn/${iconURL}@4x.png`}
+                  alt=""
+                />
+              </div>
 
-            <div className="third">
-              <p>{weatherInfo}</p>
-            </div>
+              <div className="third">
+                <p>{weatherInfo}</p>
+              </div>
 
-            <div className="fourth">
-              <p>WIND: {wind}km/h</p>
-              <p>HUMIDITY: {humidity}%</p>
-              <p>PRESSURE: {pressure}mb</p>
+              <div className="fourth">
+                <p>WIND: {wind}km/h</p>
+                <p>HUMIDITY: {humidity}%</p>
+                <p>PRESSURE: {pressure}mb</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
