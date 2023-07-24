@@ -2,7 +2,7 @@
 
 Weather website.
 
-#### [Visit Site](https://soft-weather.netlify.app/)
+#### [Demo](https://soft-weather.netlify.app/)
 
 ## Tools
 
